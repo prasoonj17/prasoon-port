@@ -3,6 +3,7 @@ import { SkillBars } from "../portfolio";
 import { Container, Row, Progress, Col } from "reactstrap";
 import Fade from "react-reveal/Fade";
 import GreetingLottie from "../components/DisplayLottie";
+import buildAnimation from "../public/lottie/build.json"; // Import JSON
 
 const Proficiency = () => {
   return (
@@ -35,7 +36,7 @@ const Proficiency = () => {
 
             <Col lg="5" className="d-flex flex-column justify-center left-8 align-items-center">
               {/* 👇 Lottie animation */}
-              <GreetingLottie animationPath="/lottie/build.json" />
+              <GreetingLottie animationData={buildAnimation} />
 
               {/* 👇 Video (auto play, loop, muted) */}
               <video
